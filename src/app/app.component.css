@@ -1,0 +1,64 @@
+:root {
+  --dark-bg: rgba(15, 15, 60, 0.95); /* Dark blueish background */
+  --star-color: rgba(255, 255, 255, 0.7); /* Slightly dimmed white for stars */
+  --primary-font: 'Brandon Grotesque', sans-serif;
+  --header-font: 'Elevon', sans-serif;
+  --light-color: white;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: var(--primary-font);
+  background-color: var(--dark-bg);
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+main {
+  width: 100vw;
+  color: var(--light-color);
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  padding: 120px 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+h1,
+h2 {
+  font-family: var(--header-font);
+  font-weight: 700;
+  color: var(--light-color);
+}
+
+#info-panel {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--light-color);
+  padding: 15px;
+  border-radius: 10px;
+  z-index: 999;
+  display: none;
+}
+
+#close-panel {
+  margin-top: 10px;
+  background-color: var(--light-color);
+  color: black;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+audio {
+  display: none; /* Hidden audio player */
+}
