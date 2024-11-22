@@ -1,64 +1,44 @@
-:root {
-  --dark-bg: rgba(15, 15, 60, 0.95); /* Dark blueish background */
-  --star-color: rgba(255, 255, 255, 0.7); /* Slightly dimmed white for stars */
-  --primary-font: 'Brandon Grotesque', sans-serif;
-  --header-font: 'Elevon', sans-serif;
-  --light-color: white;
-}
-
-body {
+#headline {
+  font-family: var(--header-font);
+  font-size: 3rem; /* Increased font size for better visibility */
+  font-weight: bold; /* Make the headline bold */
+  color: rgba(255, 255, 255, 0.9); /* Bright white text with slight transparency */
+  text-align: center;
   margin: 0;
-  overflow: hidden;
-  font-family: var(--primary-font);
-  background-color: var(--dark-bg);
+  padding: 20px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add subtle shadow for contrast */
+  z-index: 100;
 }
 
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
+#info-link {
+  font-family: var(--primary-font);
+  font-size: 1.4rem; /* Slightly larger font for the link */
+  font-weight: 500;
+  color: white; /* Bright text for readability */
+  text-decoration: none;
+  text-align: center;
+  display: inline-block; /* Ensure it behaves like a button */
+  margin: 15px auto 0;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background for contrast */
+  border-radius: 10px; /* Smoother rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Add a subtle border */
+  transition: all 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+#info-link:hover {
+  background-color: rgba(255, 255, 255, 0.8); /* Lighter background on hover */
+  color: black; /* Change text color on hover for contrast */
+  transform: scale(1.05); /* Slight scaling effect */
+  cursor: pointer;
 }
 
 main {
   width: 100vw;
-  color: var(--light-color);
+  text-align: center;
   z-index: 99;
   position: absolute;
-  width: 100%;
-  margin: 0 auto;
-  padding: 120px 0;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-}
-
-h1,
-h2 {
-  font-family: var(--header-font);
-  font-weight: 700;
-  color: var(--light-color);
-}
-
-#info-panel {
-  position: absolute;
   top: 20%;
-  left: 10%;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: var(--light-color);
-  padding: 15px;
-  border-radius: 10px;
-  z-index: 999;
-  display: none;
-}
-
-#close-panel {
-  margin-top: 10px;
-  background-color: var(--light-color);
-  color: black;
-  padding: 5px 10px;
-  border: none;
-  cursor: pointer;
-}
-
-audio {
-  display: none; /* Hidden audio player */
+  margin: 0 auto;
+  padding: 0;
 }
